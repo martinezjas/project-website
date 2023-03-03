@@ -19,7 +19,12 @@ audio.addEventListener(
     var curInterval = setInterval(function () {
       if (i < res.length) {
         if (currentTime == res[i].timestamp - 1) {
-          document.getElementById("lyrics").innerHTML = res[i].verse.content;
+          document.getElementById("lyrics").innerHTML = res[i].verse.content.replace(/(\.\s+)/g,"\$1<br>")
+          verse_number = res[i].verse.number;
+          if (verse_number == 0) {
+            verse_number = "Coro";
+          }
+          document.getElementById("verseno").innerHTML = verse_number;
           i = i + 1;
         }
       } else {
