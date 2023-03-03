@@ -42,3 +42,8 @@ def himnario():
                                    message='An non-HTTP error occurred: ' + str(err))
     else:
         return render_template('himnario_search.html', form=form)
+
+
+@app.route('/bible')
+def bible():
+    return render_template('bible.html')
