@@ -20,7 +20,7 @@ def determine_themes(hymn_number):
             hymn_subtheme = 'https://source.unsplash.com/GPPAjJicemU'#"Culto Vespertino"#'https://source.unsplash.com/GPPAjJicemU'
             # "Culto Vespertino"
     elif 53 <= hymn_number <= 77:
-        hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/3608/3608948.png'#"Dios el Padre"#'https://cdn-icons-png.flaticon.com/512/3608/3608948.png'
+        hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/2883/2883130.png'#"Dios el Padre"#'https://cdn-icons-png.flaticon.com/512/3608/3608948.png'
         # "Dios el Padre"
         if 53 <= hymn_number <= 59:
             hymn_subtheme = 'https://source.unsplash.com/Twvvfgeh-f8'#"Amor y Fidelidad de Dios"#'https://source.unsplash.com/Twvvfgeh-f8'
@@ -32,7 +32,7 @@ def determine_themes(hymn_number):
         hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/1051/1051474.png'#"Jesucristo"#'https://cdn-icons-png.flaticon.com/512/1051/1051474.png'
         # "Jesucristo"
         if 78 <= hymn_number <= 92:
-            hymn_subtheme = 'https://source.unsplash.com/dABKxsPTAEk'#"Nacimiento de Cristo"# 'https://source.unsplash.com/dABKxsPTAEk'
+            hymn_subtheme = 'https://www.care-net.org/hubfs/iStock-1290099165.jpg'#"Nacimiento de Cristo"# 'https://source.unsplash.com/dABKxsPTAEk'
             # "Nacimiento de Cristo"
         elif 93 <= hymn_number <= 102:
             hymn_subtheme = 'https://images.pexels.com/photos/415571/pexels-photo-415571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'# "Muerte de Cristo"
@@ -54,7 +54,7 @@ def determine_themes(hymn_number):
         hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/3389/3389381.png'
         hymn_subtheme = 'https://source.unsplash.com/TNlHf4m4gpI'#"Las Sagradas Escrituras"
     elif 209 <= hymn_number <= 344:
-        hymn_supertheme = "El Evangelio"
+        hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/75/75574.png'#"El Evangelio"
         if 209 <= hymn_number <= 237:
             hymn_subtheme = 'https://antrimbic.org/wp-content/uploads/2015/01/welcome.jpg'#"Invitación"
         if 238 <= hymn_number <= 244:
@@ -68,7 +68,7 @@ def determine_themes(hymn_number):
         if 316 <= hymn_number <= 344:
             hymn_subtheme = 'https://source.unsplash.com/FIKD9t5_5zQ'#"Hogar Celestial"
     elif 345 <= hymn_number <= 527:
-        hymn_supertheme = "La Vida Cristiana"
+        hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/4212/4212802.png'#"La Vida Cristiana"
         if 345 <= hymn_number <= 364:
             hymn_subtheme = 'https://source.unsplash.com/RbbdzZBKRDY'#"Gozo y Paz"
         elif 365 <= hymn_number <= 372:
@@ -94,7 +94,7 @@ def determine_themes(hymn_number):
         elif 526 <= hymn_number <= 527:
             hymn_subtheme = 'https://source.unsplash.com/AnGx1n-gtw8'#"Amor a la Patria"
     elif 528 <= hymn_number <= 588:
-        hymn_supertheme = "La Iglesia"
+        hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/9742/9742773.png'#"La Iglesia"
         if 528 <= hymn_number <= 533:
             hymn_subtheme = 'https://source.unsplash.com/hKKJnp-nWdQ'#"Iglesia"
         elif hymn_number == 534:
@@ -112,7 +112,7 @@ def determine_themes(hymn_number):
         elif hymn_number == 588:
             hymn_subtheme = 'https://source.unsplash.com/q6e4zwgtUcM'#"Funeral"
     elif 589 <= hymn_number <= 613:
-        hymn_supertheme = "El Hogar Cristiano"
+        hymn_supertheme = 'https://cdn.pixabay.com/photo/2014/04/02/10/38/house-304072_1280.png'#"El Hogar Cristiano"
         if hymn_number == 589:
             hymn_subtheme = 'https://source.unsplash.com/p0vZplFhKYI'#"Boda"
         elif 590 <= hymn_number <= 596:
@@ -124,7 +124,7 @@ def determine_themes(hymn_number):
         elif 608 <= hymn_number <= 613:
             hymn_subtheme = 'https://www.adventist.org/wp-content/uploads/2019/12/youth-scaled.jpg'#"Jóvenes"
 
-    if validators.url(hymn_subtheme):
-        return hymn_subtheme
+    if validators.url(hymn_supertheme, hymn_subtheme):
+        return hymn_supertheme, hymn_subtheme
     else:
-        return 'https://i.pinimg.com/originals/6d/6f/0e/6d6f0e4099b30c8993d460e5e565144d.jpg'
+        return 'https://cdn-icons-png.flaticon.com/512/1769/1769039.png','https://i.pinimg.com/originals/6d/6f/0e/6d6f0e4099b30c8993d460e5e565144d.jpg'

@@ -18,3 +18,7 @@ img {
 #lyrics {
   font-family: 'Merriweather', serif;
 }
+
+#icon {
+  filter: invert(1)
+}

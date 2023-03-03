@@ -1,8 +1,9 @@
 document.getElementById("audio").addEventListener("ended", function () {
   window.location.href = "/himnario";
 });
-const res = JSON.parse(lyrics);
 var audio = document.getElementById("audio");
+const res = JSON.parse(lyrics);
+var end_card_time = Math.floor(audio.duration) - 4;
 var i = 0;
 var firstTime = res[0].timestamp - 1;
 audio.addEventListener(
