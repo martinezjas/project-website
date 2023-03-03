@@ -47,6 +47,12 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -66,16 +72,22 @@
     </style>
     <main>
       <div
-        id = "title-div" class="d-flex flex-column min-vh-100 justify-content-center align-items-center"
+        id="title-div"
+        class="d-flex flex-column min-vh-100 justify-content-center align-items-center"
       >
-        <h1 id="title" class="display-2 text-white">
+        <h1 id="title" class="display-1 text-white">
           {{number}} | <em>{{title}}</em>
         </h1>
       </div>
-      <div id = "lyrics-div" class="position-absolute top-50 start-50 translate-middle">
+      <div
+        id="lyrics-div"
+        class="d-flex flex-column min-vh-100 justify-content-center align-items-center space-around"
+      >
         <h1 id="lyrics" class="display-3 px-5 text-white text-center"></h1>
       </div>
-      </div>
+      <script type="text/javascript">
+        document.getElementById("lyrics-div").style.position = "fixed";
+      </script>
       <audio id="audio" autoplay hidden>
         <source src="{{audio_url}}" , type="audio/mpeg" />
       </audio>

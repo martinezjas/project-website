@@ -12,6 +12,7 @@ audio.addEventListener(
     if (currentTime == firstTime) {
       document.getElementById("title").hidden = true;
       document.getElementById("title-div").style.position = "fixed";
+      document.getElementById("lyrics-div").style.position = "relative";
       document.getElementById("lyrics").hidden = false;
     }
     var curInterval = setInterval(function () {
