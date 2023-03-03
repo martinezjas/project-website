@@ -12,13 +12,13 @@ img {
 }
 
 #title {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 #lyrics {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 #icon {
-  filter: invert(1)
+  filter: invert(1);
 }

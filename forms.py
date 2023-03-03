@@ -8,5 +8,5 @@ class hymn_form(FlaskForm):
     number = IntegerField('Número del Himno', validators=[
                           InputRequired(), NumberRange(min=1, max=613)])
     option = RadioField("Opción", default="cantado",
-        choices=[('cantado', 'Cantado'), ('instrumental', 'Instrumental')])
+                        choices=[('cantado', 'Cantado'), ('instrumental', 'Instrumental')])
     submit = SubmitField('Buscar')
