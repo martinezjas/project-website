@@ -8,7 +8,7 @@ def determine_themes(hymn_number):
         hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/1769/1769039.png'
         if 1 <= hymn_number <= 21:
             # "Adoración y Alabanza"#'https://source.unsplash.com/3pCRW_JRKM8'
-            hymn_subtheme = 'https://source.unsplash.com/3pCRW_JRKM8'
+            hymn_subtheme = 'https://source.unsplash.com/2zHGVCrdxHw'
             # "Adoración y Alabanza"
         elif 22 <= hymn_number <= 34:
             # "Inicio del Culto"#'https://source.unsplash.com/_86u_Y0oAaM'
