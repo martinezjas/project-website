@@ -66,15 +66,16 @@
     </style>
     <main>
       <div
-        class="d-flex flex-column min-vh-100 justify-content-center align-items-center"
+        id = "title-div" class="d-flex flex-column min-vh-100 justify-content-center align-items-center"
       >
-        <h1 id="text" class="display-2 text-white">
+        <h1 id="title" class="display-2 text-white">
           {{number}} | <em>{{title}}</em>
         </h1>
       </div>
-      <h4 class="text-white text-muted">
-        <b>{{supertheme}}</b> | <i>{{subtheme}}</i>
-      </h4>
+      <div id = "lyrics-div" class="position-absolute top-50 start-50 translate-middle">
+        <h1 id="lyrics" class="display-3 px-5 text-white text-center"></h1>
+      </div>
+      </div>
       <audio id="audio" autoplay hidden>
         <source src="{{audio_url}}" , type="audio/mpeg" />
       </audio>

@@ -20,7 +20,7 @@ def determine_themes(hymn_number):
             hymn_subtheme = 'https://source.unsplash.com/GPPAjJicemU'#"Culto Vespertino"#'https://source.unsplash.com/GPPAjJicemU'
             # "Culto Vespertino"
     elif 53 <= hymn_number <= 77:
-        hymn_supertheme = "Dios el Padre"#'https://cdn-icons-png.flaticon.com/512/3608/3608948.png'
+        hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/3608/3608948.png'#"Dios el Padre"#'https://cdn-icons-png.flaticon.com/512/3608/3608948.png'
         # "Dios el Padre"
         if 53 <= hymn_number <= 59:
             hymn_subtheme = 'https://source.unsplash.com/Twvvfgeh-f8'#"Amor y Fidelidad de Dios"#'https://source.unsplash.com/Twvvfgeh-f8'
@@ -39,68 +39,70 @@ def determine_themes(hymn_number):
             # 'https://images.pexels.com/photos/415571/pexels-photo-415571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
             # "Muerte de Cristo"
         elif 103 <= hymn_number <= 106:
-            hymn_subtheme = ''
+            hymn_subtheme = 'https://assets.answersingenesis.org/img/cms/content/contentnode/og_image/empty-tomb-easter.jpg'
             # "Resurrección de Cristo"
         elif 107 <= hymn_number <= 126:
-            hymn_subtheme = "Amor de Cristo"
+            hymn_subtheme = 'https://images.pexels.com/photos/217893/pexels-photo-217893.jpeg'#"Amor de Cristo"
         elif 127 <= hymn_number <= 157:
-            hymn_subtheme = "Alabanza a Cristo"
+            hymn_subtheme = 'https://source.unsplash.com/xec7srO4U5c'#"Alabanza a Cristo"
         elif 158 <= hymn_number <= 189:
-            hymn_subtheme = "Segunda Venida de Cristo"
+            hymn_subtheme = 'https://record.adventistchurch.com/wp-content/uploads/2019/07/Greater-works.jpg'#"Segunda Venida de Cristo"
     elif 190 <= hymn_number <= 203:
-        hymn_supertheme = hymn_subtheme = "El Espíritu Santo"
+        hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/9844/9844643.png'
+        hymn_subtheme = 'https://images.pexels.com/photos/75973/pexels-photo-75973.jpeg'#"El Espíritu Santo"
     elif 204 <= hymn_number <= 208:
-        hymn_supertheme = hymn_subtheme = "Las Sagradas Escrituras"
+        hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/3389/3389381.png'
+        hymn_subtheme = 'https://source.unsplash.com/TNlHf4m4gpI'#"Las Sagradas Escrituras"
     elif 209 <= hymn_number <= 344:
         hymn_supertheme = "El Evangelio"
         if 209 <= hymn_number <= 237:
-            hymn_subtheme = "Invitación"
+            hymn_subtheme = 'https://antrimbic.org/wp-content/uploads/2015/01/welcome.jpg'#"Invitación"
         if 238 <= hymn_number <= 244:
-            hymn_subtheme = "Arrepentimiento"
+            hymn_subtheme = 'https://source.unsplash.com/NWu79O4kekw'#"Arrepentimiento"
         if 245 <= hymn_number <= 283:
-            hymn_subtheme = "Consagración"
+            hymn_subtheme = 'https://thepreachersword.files.wordpress.com/2018/08/prayer-bible-hands.jpg'#"Consagración"
         if 284 <= hymn_number <= 310:
-            hymn_subtheme = "Salvación y Redención"
+            hymn_subtheme = 'https://source.unsplash.com/UTY4N-NU6Wg'#"Salvación y Redención"
         if 311 <= hymn_number <= 315:
-            hymn_subtheme = "Juicio"
+            hymn_subtheme = 'https://i0.wp.com/ebcelkhorn.com/wp-content/uploads/2014/11/wooden-judges-gavel.jpg?resize=930%2C620&ssl=1'#"Juicio"
         if 316 <= hymn_number <= 344:
-            hymn_subtheme = "Hogar Celestial"
+            hymn_subtheme = 'https://source.unsplash.com/FIKD9t5_5zQ'#"Hogar Celestial"
     elif 345 <= hymn_number <= 527:
         hymn_supertheme = "La Vida Cristiana"
         if 345 <= hymn_number <= 364:
-            hymn_subtheme = "Gozo y Paz"
+            hymn_subtheme = 'https://source.unsplash.com/RbbdzZBKRDY'#"Gozo y Paz"
         elif 365 <= hymn_number <= 372:
-            hymn_subtheme = "Gratitud"
+            hymn_subtheme = 'https://source.unsplash.com/EAvS-4KnGrk'#"Gratitud"
         elif 373 <= hymn_number <= 390:
-            hymn_subtheme = "Oración y Comunión"
+            hymn_subtheme = 'https://source.unsplash.com/y4kMCLR7LBo'#"Oración y Comunión"
         elif 391 <= hymn_number <= 438:
-            hymn_subtheme = "Confianza y Seguridad"
+            hymn_subtheme = 'https://live.staticflickr.com/453/32580378846_0598dc35fa_b.jpg'#"Confianza y Seguridad"
         elif 439 <= hymn_number <= 465:
-            hymn_subtheme = "Petición y Anhelo"
+            hymn_subtheme = 'https://source.unsplash.com/doOCoW955NQ'#"Petición y Anhelo"
         elif 466 <= hymn_number <= 473:
-            hymn_subtheme = "Dirección Divina"
+            hymn_subtheme = 'https://source.unsplash.com/3Dtu6_XfqIk'#"Dirección Divina"
         elif 474 <= hymn_number <= 486:
-            hymn_subtheme = "Peregrinación"
+            hymn_subtheme = 'https://source.unsplash.com/iXU_zV0S62o'#"Peregrinación"
         elif 487 <= hymn_number <= 490:
-            hymn_subtheme = "Obediencia"
+            hymn_subtheme = 'https://windows10spotlight.com/wp-content/uploads/2019/09/b51276f3ed3353fd4d6d581f79619a68.jpg'#"Obediencia"
         elif 491 <= hymn_number <= 504:
-            hymn_subtheme = "Servicio Cristiano"
+            hymn_subtheme = 'https://oakridgebiblechapel.org/wp-content/uploads/2021/09/Sharing-the-Gospel-in-Huaraz.jpg'#"Servicio Cristiano"
         elif 505 <= hymn_number <= 520:
-            hymn_subtheme = "Lucha Contra el Mal"
+            hymn_subtheme = 'https://source.unsplash.com/s0PD-FogBjo'#"Lucha Contra el Mal"
         elif 521 <= hymn_number <= 525:
-            hymn_subtheme = "Mayordomía"
+            hymn_subtheme = 'https://source.unsplash.com/1dGMs4hhcVA'#"Mayordomía"
         elif 526 <= hymn_number <= 527:
-            hymn_subtheme = "Amor a la Patria"
+            hymn_subtheme = 'https://source.unsplash.com/AnGx1n-gtw8'#"Amor a la Patria"
     elif 528 <= hymn_number <= 588:
         hymn_supertheme = "La Iglesia"
         if 528 <= hymn_number <= 533:
-            hymn_subtheme = "Iglesia"
+            hymn_subtheme = 'https://source.unsplash.com/hKKJnp-nWdQ'#"Iglesia"
         elif hymn_number == 534:
-            hymn_subtheme = "Escuela Sabática"
+            hymn_subtheme = 'https://source.unsplash.com/UIib0bAvWfs'#"Escuela Sabática"
         elif 535 <= hymn_number <= 550:
-            hymn_subtheme = "Sábado"
+            hymn_subtheme = 'https://source.unsplash.com/rT6EmOueb3s'#"Sábado"
         elif 551 <= hymn_number <= 578:
-            hymn_subtheme = "Misión de la Iglesia"
+            hymn_subtheme = 'https://pewtopractice.files.wordpress.com/2011/09/outreach-image.jpg'#"Misión de la Iglesia"
         elif 579 <= hymn_number <= 580:
             hymn_subtheme = 'https://source.unsplash.com/klk3Lt75K_o'#"Bautismo"
         elif 581 <= hymn_number <= 586:
@@ -118,11 +120,11 @@ def determine_themes(hymn_number):
         elif hymn_number == 597:
             hymn_subtheme = 'https://source.unsplash.com/oOnJWBMlb5A'"Dedicación de un Niño"
         elif 598 <= hymn_number <= 607:
-            hymn_subtheme = 'https://source.unsplash.com/tvc5imO5pXk'#"Niños"
+            hymn_subtheme = 'https://source.unsplash.com/DqgMHzeio7g'#"Niños"
         elif 608 <= hymn_number <= 613:
             hymn_subtheme = 'https://www.adventist.org/wp-content/uploads/2019/12/youth-scaled.jpg'#"Jóvenes"
 
     if validators.url(hymn_subtheme):
         return hymn_subtheme
     else:
-        return 'https://source.unsplash.com/3pCRW_JRKM8'
+        return 'https://i.pinimg.com/originals/6d/6f/0e/6d6f0e4099b30c8993d460e5e565144d.jpg'
