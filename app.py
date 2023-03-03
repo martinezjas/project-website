@@ -1,8 +1,9 @@
 from flask import Flask, render_template, url_for
 from forms import hymn_form
 from requests.exceptions import HTTPError
+from helpers.pull_info import pull_data
 import requests
-
+import json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'd3f1fdf354bc63bc3c348ddf4abd39fe'
@@ -29,10 +30,16 @@ def himnario():
                 'https://sdah.my.to/hymn/' + str(hymn_number), timeout=15)
             response.raise_for_status()
             json_data = response.json()
-            return render_template('himnario_play.html', hymn_data=json_data, option=hymn_option)
+            audio_url, title, number, supertheme, subtheme, lyrics = pull_data(
+                hymn_option, json_data, hymn_number)
+            return render_template('himnario_play.html', audio_url=audio_url, title=title,
+                                   number=number, supertheme=supertheme, subtheme=subtheme,
+                                   lyrics=lyrics)
         except HTTPError as http_err:
-            return render_template('error_handle.html', message='HTTP error occurred: ' + str(http_err))
+            return render_template('error_handle.html',
+                                   message='An HTTP error occurred: ' + str(http_err))
         except Exception as err:
-            return render_template('error_handle.html', message='Other error occurred: ' + str(err))
+            return render_template('error_handle.html',
+                                   message='An non-HTTP error occurred: ' + str(err))
     else:
         return render_template('himnario_search.html', form=form)

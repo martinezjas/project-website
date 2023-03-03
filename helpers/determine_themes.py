@@ -1,39 +1,40 @@
 def determine_themes(hymn_number):
     if 1 <= hymn_number <= 52:
         # "El Culto"
-        hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/1769/1769039.png'
+        hymn_supertheme = "El Culto"#'https://cdn-icons-png.flaticon.com/512/1769/1769039.png'
         if 1 <= hymn_number <= 21:
-            hymn_subtheme = 'https://source.unsplash.com/3pCRW_JRKM8'
+            hymn_subtheme = "Adoración y Alabanza"#'https://source.unsplash.com/3pCRW_JRKM8'
             # "Adoración y Alabanza"
         elif 22 <= hymn_number <= 34:
-            hymn_subtheme = 'https://source.unsplash.com/_86u_Y0oAaM'
+            hymn_subtheme = "Inicio del Culto"#'https://source.unsplash.com/_86u_Y0oAaM'
             # "Inicio del Culto"
         elif 35 <= hymn_number <= 45:
-            hymn_subtheme = 'https://source.unsplash.com/yhEgkxZqkkk'
+            hymn_subtheme = "Cierre del Culto"#'https://source.unsplash.com/yhEgkxZqkkk'
             # "Cierre del Culto"
         elif 46 <= hymn_number <= 47:
-            hymn_subtheme = 'https://source.unsplash.com/sYffw0LNr7s'
+            hymn_subtheme = "Culto Matutino"#'https://source.unsplash.com/sYffw0LNr7s'
             # "Culto Matutino"
         elif 48 <= hymn_number <= 52:
-            hymn_subtheme = 'https://source.unsplash.com/GPPAjJicemU'
+            hymn_subtheme = "Culto Vespertino"#'https://source.unsplash.com/GPPAjJicemU'
             # "Culto Vespertino"
     elif 53 <= hymn_number <= 77:
-        hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/3608/3608948.png'
+        hymn_supertheme = "Dios el Padre"#'https://cdn-icons-png.flaticon.com/512/3608/3608948.png'
         # "Dios el Padre"
         if 53 <= hymn_number <= 59:
-            hymn_subtheme = 'https://source.unsplash.com/Twvvfgeh-f8'
+            hymn_subtheme = "Amor y Fidelidad de Dios"#'https://source.unsplash.com/Twvvfgeh-f8'
             # "Amor y Fidelidad de Dios"
         elif 59 <= hymn_number <= 77:
-            hymn_subtheme = 'https://source.unsplash.com/H3giJcTw__w'
+            hymn_subtheme = "Majestad y Poder de Dios"#'https://source.unsplash.com/H3giJcTw__w'
             # "Majestad y Poder de Dios"
     elif 78 <= hymn_number <= 189:
-        hymn_supertheme = 'https://cdn-icons-png.flaticon.com/512/1051/1051474.png'
+        hymn_supertheme = "Jesucristo"#'https://cdn-icons-png.flaticon.com/512/1051/1051474.png'
         # "Jesucristo"
         if 78 <= hymn_number <= 92:
-            hymn_subtheme = 'https://source.unsplash.com/dABKxsPTAEk'
+            hymn_subtheme = "Nacimiento de Cristo"# 'https://source.unsplash.com/dABKxsPTAEk'
             # "Nacimiento de Cristo"
         elif 93 <= hymn_number <= 102:
-            hymn_subtheme = 'https://images.pexels.com/photos/415571/pexels-photo-415571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+            hymn_subtheme = "Muerte de Cristo"
+            # 'https://images.pexels.com/photos/415571/pexels-photo-415571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
             # "Muerte de Cristo"
         elif 103 <= hymn_number <= 106:
             hymn_subtheme = ''
