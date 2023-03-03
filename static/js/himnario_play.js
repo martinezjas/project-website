@@ -12,6 +12,7 @@ audio.addEventListener(
     var currentTime = Math.floor(audio.currentTime);
     if (currentTime == firstTime) {
       document.getElementById("title").hidden = true;
+      document.getElementById("themes").hidden = true;
       document.getElementById("title-div").style.position = "fixed";
       document.getElementById("lyrics-div").style.position = "relative";
       document.getElementById("lyrics").hidden = false;

@@ -30,10 +30,10 @@ def himnario():
                 'https://sdah.my.to/hymn/' + str(hymn_number), timeout=15)
             response.raise_for_status()
             json_data = response.json()
-            audio_url, title, number, lyrics, bg_url, icon = pull_data(
+            audio_url, title, number, lyrics, bg_url, icon, super_theme, sub_theme = pull_data(
                 hymn_option, json_data, hymn_number)
             return render_template('himnario_play.html', audio_url=audio_url, title=title,
-                                   number=number, lyrics=lyrics, bg_url=bg_url, icon=icon)
+                                   number=number, lyrics=lyrics, bg_url=bg_url, icon=icon, super_theme=super_theme, sub_theme=sub_theme)
         except HTTPError as http_err:
             return render_template('error_handle.html',
                                    message='An HTTP error occurred: ' + str(http_err))

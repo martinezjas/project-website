@@ -13,7 +13,7 @@ def pull_data(hymn_option, json_data, hymn_number):
             str(hymn_number).zfill(3) + '.mp3'  # json_data['hymn']['mp3Url']
     title = json_data['hymn']['title']
     number = json_data['hymn']['number']
-    icon, bg_url = determine_themes(hymn_number)
+    icon, bg_url, super_theme, sub_theme = determine_themes(hymn_number)
     lyrics = json.dumps(json_data['history'])
     print(lyrics)
-    return audio_url, title, number, lyrics, bg_url, icon
+    return audio_url, title, number, lyrics, bg_url, icon, super_theme, sub_theme
