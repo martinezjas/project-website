@@ -96,6 +96,7 @@ leftButton.addEventListener("click", function () {
   }
 });
 
+var firstClick = false;
 rightButton.addEventListener("click", function () {
   hasBreak = true;
   document.getElementById("title").hidden = true;
@@ -103,8 +104,11 @@ rightButton.addEventListener("click", function () {
   document.getElementById("title-div").style.position = "fixed";
   document.getElementById("lyrics-div").style.position = "relative";
   document.getElementById("lyrics").hidden = false;
-  if (i < res.length) {
+  if (i < res.length && firstClick) {
     i = i + 1;
+  } else if (i < res.length && !firstClick){
+    i = 0;
+    firstClick = true;
   }
   document.getElementById("lyrics").innerHTML = res[i].verse.content.replace(
     /(\.\s+|;\s+|!\s+|\?\s+)/g,
