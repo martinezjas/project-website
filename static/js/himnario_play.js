@@ -44,16 +44,6 @@ audio.addEventListener(
 var myDocument = document.documentElement;
 var myButton = document.getElementById("fullscreen-btn");
 
-myButton.addEventListener("click", toggleFullscreen)
-myDocument.addEventListener("keydown", function (e) {
-  if (e.key == "f" || e.key == "F") {
-    toggleFullscreen();
-  }
-  if (e.key == "s" || e.key == "S") {
-    window.location.href = "/himnario";
-  }
-});
-
 function toggleFullscreen() {
   if (
     (document.fullScreenElement && document.fullScreenElement !== null) ||
@@ -79,10 +69,21 @@ function toggleFullscreen() {
   }
 }
 
+myButton.addEventListener("click", toggleFullscreen);
+myDocument.addEventListener("keydown", function (e) {
+  if (e.key == "f" || e.key == "F") {
+    toggleFullscreen();
+  }
+  if (e.key == "s" || e.key == "S") {
+    window.location.href = "/himnario";
+  }
+});
+
 var leftButton = document.getElementById("go-back");
 var rightButton = document.getElementById("go-forward");
+var firstClick = false;
 
-leftButton.addEventListener("click", function () {
+function goBack() {
   hasBreak = true;
   document.getElementById("title").hidden = true;
   document.getElementById("themes").hidden = true;
@@ -104,10 +105,9 @@ leftButton.addEventListener("click", function () {
   if (i + 1 == res.length) {
     document.getElementById("end_icon").hidden = false;
   }
-});
+}
 
-var firstClick = false;
-rightButton.addEventListener("click", function () {
+function goForward() {
   hasBreak = true;
   document.getElementById("title").hidden = true;
   document.getElementById("themes").hidden = true;
@@ -131,5 +131,19 @@ rightButton.addEventListener("click", function () {
   document.getElementById("verseno").innerHTML = verse_number;
   if (i + 1 == res.length) {
     document.getElementById("end_icon").hidden = false;
+  }
+}
+
+leftButton.addEventListener("click", goBack);
+myDocument.addEventListener("keydown", function (e) {
+  if (e.key == "ArrowLeft") {
+    goBack();
+  }
+});
+
+rightButton.addEventListener("click", goForward);
+myDocument.addEventListener("keydown", function (e) {
+  if (e.key == "ArrowRight") {
+    goForward();
   }
 });
