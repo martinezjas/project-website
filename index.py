@@ -43,9 +43,11 @@ def himnario():
     else:
         return render_template('himnario_search.html', form=form)
 
+
 @app.route('/hdoc')
 def hdoc():
     return render_template('himnario_doc.html')
+
 
 @app.route('/bible')
 def bible():

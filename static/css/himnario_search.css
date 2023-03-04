@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   background-image: url(https://source.unsplash.com/n8rK2ALPHTY);
   min-height: 100%;
   min-width: 100%;
@@ -11,6 +12,11 @@ img {
   height: auto;
 }
 
-h1, h3, p, form, ul, li{
-    font-family: "Merriweather", serif;
+h1,
+h3,
+p,
+form,
+ul,
+li {
+  font-family: "Merriweather", serif;
 }
