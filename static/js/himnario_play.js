@@ -1,4 +1,34 @@
+function isScreenLockSupported() {
+  return ('wakeLock' in navigator);
+ }
+async function getScreenLock() {
+  if(isScreenLockSupported()){
+    let screenLock;
+    try {
+       screenLock = await navigator.wakeLock.request('screen');
+    } catch(err) {
+       console.log(err.name, err.message);
+    }
+    return screenLock;
+  }
+}
+function release() { 
+  if(typeof screenLock !== "undefined" && screenLock != null) {
+    screenLock.release()
+    .then(() => {
+      console.log("Lock released 🎈");
+      screenLock = null;
+    });
+  }
+}
+getScreenLock();
+document.addEventListener('visibilitychange', async () => {
+  if (screenLock !== null && document.visibilityState === 'visible') {
+    screenLock = await navigator.wakeLock.request('screen');
+  }
+});
 document.getElementById("audio").addEventListener("ended", function () {
+  release();
   window.location.href = "/himnario";
 });
 var audio = document.getElementById("audio");
@@ -75,6 +105,7 @@ myDocument.addEventListener("keydown", function (e) {
     toggleFullscreen();
   }
   if (e.key == "s" || e.key == "S") {
+    release();
     window.location.href = "/himnario";
   }
 });
