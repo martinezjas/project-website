@@ -44,7 +44,14 @@ audio.addEventListener(
 var myDocument = document.documentElement;
 var myButton = document.getElementById("fullscreen-btn");
 
-myButton.addEventListener("click", function () {
+myButton.addEventListener("click", toggleFullscreen)
+myDocument.addEventListener("keydown", function (e) {
+  if (e.key == "f" || e.key == "F") {
+    toggleFullscreen();
+  }
+});
+
+function toggleFullscreen() {
   if (
     (document.fullScreenElement && document.fullScreenElement !== null) ||
     (!document.mozFullScreen && !document.webkitIsFullScreen)
@@ -67,7 +74,7 @@ myButton.addEventListener("click", function () {
       document.webkitCancelFullScreen();
     }
   }
-});
+}
 
 var leftButton = document.getElementById("go-back");
 var rightButton = document.getElementById("go-forward");
