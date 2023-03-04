@@ -3,9 +3,10 @@ document.getElementById("audio").addEventListener("ended", function () {
 });
 var audio = document.getElementById("audio");
 const res = JSON.parse(lyrics);
-var end_card_time = Math.floor(audio.duration) - 4;
+const end_card_time = Math.floor(audio.duration) - 4;
 var i = 0;
-var firstTime = res[0].timestamp - 1;
+const firstTime = res[0].timestamp - 1;
+var hasBreak = false;
 audio.addEventListener(
   "timeupdate",
   function () {
@@ -18,7 +19,7 @@ audio.addEventListener(
       document.getElementById("lyrics").hidden = false;
     }
     var curInterval = setInterval(function () {
-      if (i < res.length) {
+      if (i < res.length && !hasBreak) {
         if (currentTime == res[i].timestamp - 1) {
           document.getElementById("lyrics").innerHTML = res[
             i
@@ -40,26 +41,81 @@ audio.addEventListener(
   },
   false
 );
-let myDocument = document.documentElement;
-let myButton = document.getElementById("fullscreen-btn");
+var myDocument = document.documentElement;
+var myButton = document.getElementById("fullscreen-btn");
 
 myButton.addEventListener("click", function () {
-  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
-   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-    if (document.documentElement.requestFullScreen) {  
-      document.documentElement.requestFullScreen();  
-    } else if (document.documentElement.mozRequestFullScreen) {  
-      document.documentElement.mozRequestFullScreen();  
-    } else if (document.documentElement.webkitRequestFullScreen) {  
-      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
-    }  
-  } else {  
-    if (document.cancelFullScreen) {  
-      document.cancelFullScreen();  
-    } else if (document.mozCancelFullScreen) {  
-      document.mozCancelFullScreen();  
-    } else if (document.webkitCancelFullScreen) {  
-      document.webkitCancelFullScreen();  
-    }  
-  }  
+  if (
+    (document.fullScreenElement && document.fullScreenElement !== null) ||
+    (!document.mozFullScreen && !document.webkitIsFullScreen)
+  ) {
+    if (document.documentElement.requestFullScreen) {
+      document.documentElement.requestFullScreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullScreen) {
+      document.documentElement.webkitRequestFullScreen(
+        Element.ALLOW_KEYBOARD_INPUT
+      );
+    }
+  } else {
+    if (document.cancelFullScreen) {
+      document.cancelFullScreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen();
+    }
+  }
+});
+
+var leftButton = document.getElementById("go-back");
+var rightButton = document.getElementById("go-forward");
+
+leftButton.addEventListener("click", function () {
+  hasBreak = true;
+  document.getElementById("title").hidden = true;
+  document.getElementById("themes").hidden = true;
+  document.getElementById("title-div").style.position = "fixed";
+  document.getElementById("lyrics-div").style.position = "relative";
+  document.getElementById("lyrics").hidden = false;
+  if (i > 0) {
+    i = i - 1;
+  }
+  document.getElementById("lyrics").innerHTML = res[i].verse.content.replace(
+    /(\.\s+|;\s+|!\s+|\?\s+)/g,
+    "$1<br>"
+  );
+  verse_number = res[i].verse.number;
+  if (verse_number == 0) {
+    verse_number = "Coro";
+  }
+  document.getElementById("verseno").innerHTML = verse_number;
+  if (i + 1 == res.length) {
+    document.getElementById("end_icon").hidden = false;
+  }
+});
+
+rightButton.addEventListener("click", function () {
+  hasBreak = true;
+  document.getElementById("title").hidden = true;
+  document.getElementById("themes").hidden = true;
+  document.getElementById("title-div").style.position = "fixed";
+  document.getElementById("lyrics-div").style.position = "relative";
+  document.getElementById("lyrics").hidden = false;
+  if (i < res.length) {
+    i = i + 1;
+  }
+  document.getElementById("lyrics").innerHTML = res[i].verse.content.replace(
+    /(\.\s+|;\s+|!\s+|\?\s+)/g,
+    "$1<br>"
+  );
+  verse_number = res[i].verse.number;
+  if (verse_number == 0) {
+    verse_number = "Coro";
+  }
+  document.getElementById("verseno").innerHTML = verse_number;
+  if (i + 1 == res.length) {
+    document.getElementById("end_icon").hidden = false;
+  }
 });
