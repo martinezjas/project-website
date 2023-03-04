@@ -49,6 +49,9 @@ myDocument.addEventListener("keydown", function (e) {
   if (e.key == "f" || e.key == "F") {
     toggleFullscreen();
   }
+  if (e.key == "s" || e.key == "S") {
+    window.location.href = "/himnario";
+  }
 });
 
 function toggleFullscreen() {
