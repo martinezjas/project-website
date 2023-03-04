@@ -105,6 +105,9 @@ function goBack() {
   if (i + 1 == res.length) {
     document.getElementById("end_icon").hidden = false;
   }
+  if (i + 1 != res.length) {
+    document.getElementById("end_icon").hidden = true;
+  }
 }
 
 function goForward() {
@@ -131,6 +134,9 @@ function goForward() {
   document.getElementById("verseno").innerHTML = verse_number;
   if (i + 1 == res.length) {
     document.getElementById("end_icon").hidden = false;
+  }
+  if (i + 1 != res.length) {
+    document.getElementById("end_icon").hidden = true;
   }
 }
 
