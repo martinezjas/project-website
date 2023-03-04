@@ -106,7 +106,7 @@ rightButton.addEventListener("click", function () {
   document.getElementById("lyrics").hidden = false;
   if (i < res.length && firstClick) {
     i = i + 1;
-  } else if (i < res.length && !firstClick){
+  } else if (i < res.length && !firstClick) {
     i = 0;
     firstClick = true;
   }
